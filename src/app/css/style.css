@@ -1,0 +1,243 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 9 févr. 2015, 21:59:18
+    Author     : mohamed
+
+    colors current:#009EE3
+    previous : 009EE3;
+*/
+
+
+
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('Roboto-Light.ttf');
+}
+
+*{
+    -fx-font-family: "Roboto";
+}
+
+//personnalise les combox
+.combo-box .list-cell{
+    -fx-cell-size: 25;
+    //-fx-font-size: 13px;
+    //-fx-font-weight: bold;
+    //-fx-border-right: ;
+    // -fx-border: solid thick #009EE3;
+
+}
+
+//listview
+.list-cell{
+    -fx-cell-size: 50;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    //-fx-border-right: ;
+    // -fx-border: solid thick #009EE3;
+
+}
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: #009EE3;
+    -fx-text-fill: white;
+    -fx-border-width: 1;
+    //-fx-background-insets: 0 ;
+
+}
+
+.list-cell:even, .list-cell:odd { /* <=== changed to even */
+    -fx-background-color: #F1F1F1;
+    -fx-border-width: 1;
+
+
+}
+.list-cell:filled:hover {
+    -fx-background-color:#F5F5F5 ;
+    -fx-text-fill: black;
+}
+
+
+// cacher separateur du splitpane 
+.split-pane > .split-pane-divider {
+    -fx-border-color: #F1F1F1;
+    -fx-background-color: #F1F1F1;
+    -fx-padding: 0 0em 0 0em;
+    //-fx-effect: dropshadow(three-pass-box, #009EE3, 20, 0, 0, 0);
+}
+
+
+//couleur de fond de l'ensemble des panes'
+.panes{
+    -fx-background-color: #FBFBFB ;
+}
+
+//image de fond pour l'ecan d'acceuil'
+.home-pane{
+    -fx-background-image: url(../img/homebg.jpg);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+}
+
+.fodidi-pane{
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    
+    -fx-border-color: #fff;
+    -fx-border-style: solid;
+    -fx-border-width: 0.5px;
+    -fx-border-radius: 0px;
+    -fx-effect: innershadow(three-pass-box, #fff, 2, 0, 0, 0);
+}
+
+//barre superieur indique l'unité d'angle utilisé actuellement'
+.top-bar{    
+    -fx-background-color: #FFBB00;
+}
+
+//bouton de retour a l'accueil'
+#back-to-home-Btn{
+    -fx-background-image: url(../img/back.png);
+
+}
+//bouton de parametre
+#settings-Btn{
+    -fx-background-image: url(../img/settings.png);
+    // -fx-padding: 0.25em  1em 0.25em 2em; 
+
+}
+
+//bounton d'accueil et de parametres
+.top-bar-Btn{   
+
+    -fx-padding: 0.25em  1em 0.25em 1em; 
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    //-fx-background-size: 14px;
+    -fx-background-color: #F4F4F4;
+    -fx-text-fill: #000;
+    //  -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    /*    -fx-border-radius: 0px;
+        -fx-border-color: #000;
+        -fx-border-width: 0.5px;
+        -fx-border-style: solid;*/
+}
+
+.top-bar-Btn:hover{
+    //-fx-border-color: #5F97D2;
+    //-fx-border-width: 1px;
+    //-fx-background-position: center;
+    -fx-background-color: white;
+
+
+}
+
+.effacer-button{    
+    -fx-background-color:  #E65942;
+    -fx-text-fill: #fff;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 4px;
+    -fx-border-width: 1px;
+    -fx-border-color: transparent;
+    -fx-padding: 3 30 3 30;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+}
+
+.effacer-button:hover{
+    
+}
+
+.effacer-button:pressed{
+    -fx-effect: dropshadow(gaussian, #fff, 10, 0, 0, 0);
+    -fx-background-color:  #DB523C;
+}
+
+.home-button {
+    
+    -fx-background-color: #009EE3;
+    -fx-text-fill: #fff;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 1px;
+    -fx-effect: dropshadow(gaussian, #fff, 2, 0, 0, 0);
+}
+
+.home-button:pressed{
+    -fx-background-color: #62A4E9;
+}
+
+.inputField{
+    -fx-font-family: "Roboto-Bold";
+    -fx-font-size: 15px;
+    -fx-background-color: -fx-text-box-border, #fff;
+    -fx-border-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-radius: 1px;
+}
+
+.inputField:focused{
+    -fx-effect: dropshadow(gaussian, #62A4E9, 3, 0, 0, 0);
+    -fx-border-color: #62A4E9;
+    /*    -fx-border-width: 0.5px;
+        -fx-border-style: solid;
+        -fx-border-radius: 5px;*/
+}
+
+.resultField{
+    -fx-font-family: "Roboto-Bold";
+    -fx-font-size: 15px;
+    -fx-background-color: -fx-text-box-border, #FBFBFB;
+    -fx-border-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-radius: 1px;
+    -fx-text-alignment: center;
+
+
+}
+
+.resultField:focused{
+    -fx-effect: dropshadow(gaussian, #62A4E9, 2, 0, 0, 0);
+    -fx-border-color: #62A4E9;
+    /*    -fx-border-width: 0.5px;
+        -fx-border-style: solid;
+        -fx-border-radius: 5px;*/
+}
+
+.resultLbls{
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.simpleLbls{
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.boldLbls{
+    -fx-underline: true;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.photo{
+    -fx-effect: dropshadow(three-pass-box, gray, 10, 0, 0, 0);
+}
+
